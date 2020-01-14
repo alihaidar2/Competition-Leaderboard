@@ -3,3 +3,5 @@
 ## Membres du groupe
 
 * Ivor Benderavage  8171462
+* Ali Haidar        8328785
+* Haifa Besrour     
