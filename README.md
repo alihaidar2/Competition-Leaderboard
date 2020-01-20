@@ -10,3 +10,6 @@
 ### ER Diagram
 
 ![ER diagram](https://github.com/professor-forward/projet-csi2532_team/blob/master/image.png)
+
+### Relational model  model
+![R diagram](https://github.com/professor-forward/projet-csi2532_team/blob/master/relationalmodel.png)
