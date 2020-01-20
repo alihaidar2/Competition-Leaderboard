@@ -14,9 +14,9 @@
 ![R diagram](https://github.com/professor-forward/projet-csi2532_team/blob/master/R-model.png)
 
 
-### PostgreSQL Queries 
+# PostgreSQL Queries 
 
-# **** CREATE table ****
+## **** CREATE table ****
 create table Athlete (
 	athleteID serial primary key,
 	firstname varchar(20) not null,
@@ -25,8 +25,8 @@ create table Athlete (
 	gender varchar(6) not null
 )
 
-# **** INSERT values ****
-# inserts 6 athletes into the database
+## **** INSERT values ****
+### inserts 6 athletes into the database
 INSERT into athlete 
 values 
 (default, 'Micheal', 'Jordan', '1963-02-17', 'Male'),
@@ -37,22 +37,22 @@ values
 (default, 'Alex', 'Morgan', '1989-07-02', 'Female')
 
 
-# **** SELECT ****
-# selects first and last names and concatenates them to display a fullname 
+## **** SELECT ****
+### selects first and last names and concatenates them to display a fullname 
 select 
 	firstname || ' ' || lastname AS full_name
 FROM
 	athlete
 
-# **** UPDATE ****
-# Sets the date of birth of every athlete born before 1987 to NULL
+## **** UPDATE ****
+### Sets the date of birth of every athlete born before 1987 to NULL
 update athlete
 set dob = NULL
 where dob < '1987-01-01'
 
 
-# **** DELETE ****
-# Deletes all male athletes from the database
+## **** DELETE ****
+### Deletes all male athletes from the database
 delete from athlete
 where gender = 'Male'
 
