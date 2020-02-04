@@ -8,7 +8,7 @@
 
 # Livrable 2
 ### ER Diagram
-![ER diagram](https://github.com/professor-forward/projet-csi2532_team/blob/master/ERModelLivrable2.png)
+![ER diagram](https://github.com/professor-forward/projet-csi2532_team/blob/livrable-2/ERModelLivrable2.png)
 
 ### Relational model
 ![R diagram](https://github.com/professor-forward/projet-csi2532_team/blob/master/R-model.png)
