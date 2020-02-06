@@ -23,7 +23,9 @@ Below are different models and SQL queries that can be used on our database
 
 ## Relational Model
 
-![ER Model](D1_files/RelationalModel.png)
+![Relational Model](D1_files/RelationalModel.png)
+
+
 
 ## SQL Schema
 
