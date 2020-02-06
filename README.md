@@ -19,7 +19,7 @@ Below are different models and SQL queries that can be used on our database
 
 ## ER Model
 
-![ER Model](ErModel.png)
+![ER Model](D1_files/ErModel.png)
 
 ## Relational Model
 
