@@ -19,11 +19,11 @@ The leaderboard database models an athlete
 
 ## ER Model
 
-![ER Model](ErModel.png)
+![ER Model](D1_files/ErModel.png)
 
 ## Relational Model
 
-![ER Model](RelationalModel.png)
+![ER Model](D1_files/RelationalModel.png)
 
 ## SQL Schema
 
