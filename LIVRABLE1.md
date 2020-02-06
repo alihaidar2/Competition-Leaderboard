@@ -6,9 +6,9 @@
 * Ali Haidar        8328785
 * Haifa Besrour     300102272
 
-# Livrable 2
+# Livrable 1
 ### ER Diagram
-![ER diagram](https://github.com/professor-forward/projet-csi2532_team/blob/livrable-2/ERModelLivrable2.png)
+![ER diagram](https://github.com/professor-forward/projet-csi2532_team/blob/master/ER-model.png)
 
 ### Relational model
 ![R diagram](https://github.com/professor-forward/projet-csi2532_team/blob/master/R-model.png)
