@@ -1,61 +1,91 @@
-# CSI2532 Bases de donnees 1
+# CSI2532 - Bases de Données I
 
-## Membres du groupe
+## Outline
 
-* Ivor Benderavage  8171462
-* Ali Haidar        8328785
-* Haifa Besrour     300102272
+| Outline | Value |
+| --- | --- |
+| Course | CSI 2532 |
+| Date | Winter 2020 |
+| Professor | [Andrew Forward](aforward@uottawa.ca) |
+| Team | Ali Haidar 8328785<br> Ivor Benderavage 8171462<br> Haifa Besrour 300102272<br> |
 
-# Livrable 2
-### ER Diagram
-![ER diagram](https://github.com/professor-forward/projet-csi2532_team/blob/livrable-2/ERModelLivrable2.png)
+## Deliverables
 
-### Relational model
-![R diagram](https://github.com/professor-forward/projet-csi2532_team/blob/master/R-model.png)
+### Deliverable 1
 
+## Application Description
 
-# PostgreSQL Queries 
+The leaderboard database models an athlete
 
-## **** CREATE table ****
-create table Athlete (
-	athleteID serial primary key,
-	firstname varchar(20) not null,
-	lastname varchar(20) not null,
-	dob date,
-	gender varchar(6) not null
-)
+## ER Model
 
-## **** INSERT values ****
-### inserts 6 athletes into the database
-INSERT into athlete 
-values 
-(default, 'Micheal', 'Jordan', '1963-02-17', 'Male'),
-(default, 'Lionel', 'Messi', '1987-06-24', 'Male'),
-(default, 'Serena', 'Williams', '1981-09-26', 'Female'),
-(default, 'Maria', 'Sharapova', '1987-04-19', 'Female'),
-(default, 'Sidney', 'Crosby', '1987-08-07', 'Male'),
-(default, 'Alex', 'Morgan', '1989-07-02', 'Female')
+![ER Model](ErModel-D1.png)
 
+## Relational Model
 
-## **** SELECT ****
-### selects first and last names and concatenates them to display a fullname 
-select 
-	firstname || ' ' || lastname AS full_name
-FROM
-	athlete
+![ER Model](RelationalModel-D1.png)
 
-## **** UPDATE ****
-### Sets the date of birth of every athlete born before 1987 to NULL
-update athlete
-set dob = NULL
-where dob < '1987-01-01'
+## SQL Schema
 
+```sql
+CREATE TABLE athletes (
+  id int,
+  identifier varchar(50),
+  created timestamp,
+  modified timestamp,
+  name varchar(50),
+  dob date,
+  identified_gender varchar(6),
+  PRIMARY KEY (id)
+);
+```
 
-## **** DELETE ****
-### Deletes all male athletes from the database
-delete from athlete
-where gender = 'Male'
+## Example SQL Queries
 
+### INSERT
 
+```sql
+INSERT INTO athletes (id, name, identified_gender, dob)
+VALUES
+(1, 'Andrew', 'm', '1975-12-01'),
+(2, 'Ayana', 'F', '1998-06-11'),
+(3, 'Hayden', 'm', '1996-07-24'),
+(4, 'August', 'm', '1999-09-09');
+```
 
+### SELECT 
 
+```sql
+SELECT *
+FROM athletes
+WHERE identified_gender = 'F';
+```
+
+### UPDATE
+
+```sql
+UPDATE athletes
+SET identified_gender = 'M'
+WHERE identified_gender = 'm';
+```
+
+### SELECT
+
+```sql
+SELECT *
+FROM athletes
+WHERE identified_gender = 'M';
+```
+
+### DELETE
+
+```sql
+DELETE FROM athletes;
+```
+
+### SELECT
+
+```sql
+SELECT count(*)
+FROM athletes;
+```
