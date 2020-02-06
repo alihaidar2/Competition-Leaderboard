@@ -9,13 +9,13 @@
 | Professor | [Andrew Forward](aforward@uottawa.ca) |
 | Team | Ali Haidar 8328785<br> Ivor Benderavage 8171462<br> Haifa Besrour 300102272<br> |
 
-## Deliverables
-
-### Deliverable 1
 
 ## Application Description
 
 The leaderboard database models an athlete
+
+## Deliverable 1
+Below are different models and SQL queries that can be used on our database
 
 ## ER Model
 
