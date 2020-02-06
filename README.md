@@ -19,11 +19,11 @@ Below are different models and SQL queries that can be used on our database
 
 ## ER Model
 
-![ER Model](ErModel-D1.png)
+![ER Model](ErModel.png)
 
 ## Relational Model
 
-![ER Model](RelationalModel-D1.png)
+![ER Model](RelationalModel.png)
 
 ## SQL Schema
 
