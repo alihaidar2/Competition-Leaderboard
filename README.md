@@ -26,7 +26,6 @@ Below are different models and SQL queries that can be used on our database
 ![Relational Model](D1_files/RelationalModel.png)
 
 
-
 ## SQL Schema
 
 ```sql
