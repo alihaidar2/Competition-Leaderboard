@@ -103,7 +103,7 @@ Below are different models and SQL queries that can be used on our database
 
 ## SQL Schema
 
-The [schema]https://github.com/professor-forward/projet-csi2532_team/tree/master/db/schema.sql) is also available.
+The [schema](https://github.com/professor-forward/projet-csi2532_team/tree/master/db/schema.sql) is also available.
 
 
 ## Example SQL Queries
