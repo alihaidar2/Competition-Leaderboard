@@ -103,13 +103,13 @@ Below are different models and SQL queries that can be used on our database
 
 ## SQL Schema
 
-The schema can be found at in the schema.sql file
+The [schema](https://github.com/professor-forward/projet-csi2532_team/tree/master/db/schema.sql) is also available.
 
 
 ## Example SQL Queries
 
-The SQL queries can also be found in the seed.sql file
+The SQL queries can also be found [here](https://github.com/professor-forward/projet-csi2532_team/tree/master/db/seed.sql)
 
 ## Migrations 
 
-Our migrations for the deliverables are also available in the migrations folder.
+Our [migrations](https://github.com/professor-forward/projet-csi2532_team/tree/master/db/migrations) can also be accessed
