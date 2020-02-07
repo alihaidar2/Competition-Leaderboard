@@ -10,20 +10,18 @@
 | Team | Ali Haidar 8328785<br> Ivor Benderavage 8171462<br> Haifa Besrour 300102272<br> |
 
 
-## Application Description
+# Deliverable 1
 
-The leaderboard database models an athlete
-
-## Deliverable 1
 Below are different models and SQL queries that can be used on our database
 
 ## ER Model
 
-![ER Model](ErModel-D1.png)
+![ER Model](D1_files/ErModel.png)
 
 ## Relational Model
 
-![ER Model](RelationalModel-D1.png)
+![Relational Model](D1_files/RelationalModel.png)
+
 
 ## SQL Schema
 
@@ -89,3 +87,29 @@ DELETE FROM athletes;
 SELECT count(*)
 FROM athletes;
 ```
+
+# Deliverable 2
+
+Below are different models and SQL queries that can be used on our database
+
+## ER Model
+
+![ER Model](D2_files/ErModel2.png)
+
+## Relational Model
+
+![Relational Model](D2_files/RelationalModel2.png)
+
+
+## SQL Schema
+
+The schema can be found at ![Schema](schema.sql)
+
+
+## Example SQL Queries
+
+The SQL queries can also be found at ![Seed](seed.sql)
+
+## Migrations 
+
+Our ![Migrations](migrations) for the deliverables are also available 
