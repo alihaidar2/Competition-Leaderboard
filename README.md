@@ -108,7 +108,7 @@ The schema can be found at in the schema.sql file
 
 ## Example SQL Queries
 
-The SQL queries can also be found ![here](db/seed.sql)
+The SQL queries can also be found ![here](db/seed)
 
 ## Migrations 
 
