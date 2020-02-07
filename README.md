@@ -108,7 +108,7 @@ The schema can be found at in the schema.sql file
 
 ## Example SQL Queries
 
-The SQL queries can also be found ![here](db/seed)
+The SQL queries can also be found ! [here](https://github.com/professor-forward/projet-csi2532_team/tree/master/db/seed.sql)
 
 ## Migrations 
 
