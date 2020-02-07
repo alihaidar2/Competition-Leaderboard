@@ -16,11 +16,11 @@ Below are different models and SQL queries that can be used on our database
 
 ## ER Model
 
-![ER Model](D1_files/ErModel.png)
+![ER Model](assets/ErModel.png)
 
 ## Relational Model
 
-![Relational Model](D1_files/RelationalModel.png)
+![Relational Model](assets/RelationalModel.png)
 
 
 ## SQL Schema
@@ -94,12 +94,11 @@ Below are different models and SQL queries that can be used on our database
 
 ## ER Model
 
-![ER Model](D2_files/ERModel2.png)
+![ER Model](assets/ERModel2.png)
 
 ## Relational Model
 
-![Relational Model](D2_files/RelationalModel2.png)
-![Relational Model](D2_files/RelationalModel2.png)
+![Relational Model](assets/RelationalModel2.png)
 
 
 ## SQL Schema
