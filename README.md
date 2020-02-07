@@ -98,19 +98,19 @@ Below are different models and SQL queries that can be used on our database
 
 ## Relational Model
 
-![Relational Model](D1_files/RelationalModel.png)
+![Relational Model](D2_files/RelationalModel2.png)
 ![Relational Model](D2_files/RelationalModel2.png)
 
 
 ## SQL Schema
 
-The schema can be found at ![Schema](schema.sql)
+The schema can be found at in the schema.sql file
 
 
 ## Example SQL Queries
 
-The SQL queries can also be found at ![Seed](seed.sql)
+The SQL queries can also be found in the seed.sql file
 
 ## Migrations 
 
-Our ![Migrations](migrations) for the deliverables are also available 
+Our migrations for the deliverables are also available in the migrations folder.
