@@ -139,3 +139,6 @@ php -S 127.0.0.1:7000 application/index.php
 ```
 
 6. Navigate to http://localhost:7000 in your browser to access the app.
+
+
+![Application](assets/app.png)
