@@ -16,13 +16,13 @@ VALUES
 --correct case
 UPDATE competitions
 SET name = 'Australian Open'
-WHERE name = 'Australian open'
+WHERE name = 'Australian open';
 
 --show which venues have events lasting longer than 20 days
 SELECT venue
 FROM competitions
-WHERE duration > 20
+WHERE duration > 20;
 
 --remove women from database
 DELETE FROM athletes
-WHERE identified_gender = 'F'
+WHERE identified_gender = 'F';

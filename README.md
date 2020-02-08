@@ -113,3 +113,29 @@ The SQL queries can also be found [here](https://github.com/professor-forward/pr
 ## Migrations 
 
 Our [migrations](https://github.com/professor-forward/projet-csi2532_team/tree/master/db/migrations) can also be accessed
+
+
+## Application
+
+Our application is a PHP frontend for the PostgreSQL database which can be used to perform read-only queries on the database.
+
+Setup instructions on Linux:
+
+
+1. Install and set up postgreSQL [(Instructions for Arch Linux here)](https://wiki.archlinux.org/index.php/PostgreSQL).  (Or use an installation wizard)
+
+* Follow the instructions to create a user and a DB.  Create a user called `webuser` and a database called `TestSql`
+
+2. Run `permissions.sql`.  This will give the `webuser` user the permissions we want (i.e. read-only queries only!)
+
+3. Add our tables to the database by running `schema.sql`
+
+4. Populate the database by running `seed.sql` or entering information manually
+
+5. Start the local PHP server:
+
+```
+php -S 127.0.0.1:7000 application/index.php
+```
+
+6. Navigate to http://localhost:7000 in your browser to access the app.
