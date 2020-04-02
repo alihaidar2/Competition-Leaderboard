@@ -68,5 +68,20 @@ CREATE TABLE score (
   PRIMARY KEY (athleteID, eventID)
 );
 
+CREATE TABLE registrations (
+  id SERIAL NOT NULL,
+  athleteID  int REFERENCES athlete (id),
+  competitionID int REFERENCES competitions (competitionID),
+  age int,
+  gender varchar(100),
+  PRIMARY KEY (id)
+);
+
+
+
+
+
+
+
 
 
