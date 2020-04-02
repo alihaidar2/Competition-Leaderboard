@@ -1,37 +1,5 @@
-CREATE SEQUENCE person_id_seq;
-CREATE TABLE person (
-  id int DEFAULT nextval('person_id_seq'),
-  name varchar(1000) NOT NULL,
-  email varchar(1000) NOT NULL,
-  PRIMARY KEY (id),
-);
-
-
-CREATE TABLE athlete
-(
-    id int NOT NULL,
-    dob date,
-    gender varchar(100),
-    nationality varchar(100),
-    competitionId int,
-    PRIMARY KEY(id),
-    FOREIGN KEY(id) REFERENCES person.id,
-    FOREIGN KEY (competitionID) REFERENCES competitions(competitionID)
-);
-
-CREATE TABLE Contact
-(
-    id int NOT NULL,
-    phoneNum int,
-    PRIMARY KEY(id),
-    FOREIGN KEY(id) REFERENCES person.id
-);
-
-
-
-CREATE SEQUENCE competitions_id_seq;
 CREATE TABLE competitions (
-  competitonID int DEFAULT nextval('competitions_id_seq'),
+  competitionID SERIAL NOT NULL,
   name varchar(1000),
   venue varchar(1000),
   start_date date,
@@ -39,21 +7,66 @@ CREATE TABLE competitions (
   maxMen int,
   maxFem int,
   numEvents int,
-  PRIMARY KEY (competitonID),
+  partnerID int,
+  PRIMARY KEY (competitionID ),
+  FOREIGN KEY(partnerID) REFERENCES partner(partnerID)
 );
 
-CREATE SEQUENCE partner_id_seq;
+CREATE TABLE event (
+  eventID SERIAL NOT NULL,
+  name varchar(1000),
+  competitionID int,
+  PRIMARY KEY (eventID),
+  FOREIGN KEY (competitionID) REFERENCES competitions(competitionID)
+);
+ 
+CREATE TABLE athlete
+(
+  id SERIAL NOT NULL,
+  dob date,
+  name varchar(1000) NOT NULL,
+  email varchar(1000) NOT NULL,
+  gender varchar(100),
+  nationality varchar(100),
+  competitionID int,
+  eventID int,
+  PRIMARY KEY(id),
+  FOREIGN KEY (competitionID) REFERENCES competitions(competitionID),
+  FOREIGN KEY (eventID) REFERENCES event(eventID)
+);
+
+CREATE TABLE contact
+(
+  contactID SERIAL NOT NULL,
+  name varchar(1000) NOT NULL,
+  email varchar(1000) NOT NULL,
+  phoneNum int,
+  competitionID int,
+  partnerID int,
+  PRIMARY KEY(contactID),
+  FOREIGN KEY(competitionID) REFERENCES competitions(competitionID),
+  FOREIGN KEY(partnerID) REFERENCES partner(partnerID)
+);
+
 CREATE TABLE partner (
-  partnerID int DEFAULT nextval('partner_id_seq'),
+  partnerID SERIAL NOT NULL,
   companyName varchar(1000) NOT NULL,
   address varchar(1000),
-  competitionID int,
   contactID int,
-  PRIMARY KEY (id),
-  FOREIGN KEY(competitionID) REFERENCES competitions.competitonID,
-  FOREIGN KEY(contactID) REFERENCES Contact.id
+  PRIMARY KEY (partnerID),
+  FOREIGN KEY(contactID) REFERENCES contact(contactID)
 );
 
+
+CREATE TABLE score (
+  num_score int,
+  time_score TIMESTAMP,
+  num_tie int,
+  time_tie TIMESTAMP,
+  athleteID int REFERENCES athlete(id),
+  eventID int REFERENCES event(eventID),
+  PRIMARY KEY (athleteID, eventID)
+);
 
 
 
