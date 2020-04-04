@@ -28,7 +28,7 @@ table tr th {
 
 <center>
 
-<h1>PostgreSQL Query Interface</h1>
+<h1>Competition Leaderboard</h1>
 
 <form action="index.php" method="post">
 
@@ -40,9 +40,34 @@ Query here: <input type="text" name="query"><br>
 
 <?PHP
 
-	if (isset($_POST['query'])) {
+	if (isset($_POST['query']) or isset($_GET['sort'])) {
 
-	$sql = htmlspecialchars($_POST['query']);
+	$sql = htmlspecialchars($_POST['query']) . htmlspecialchars($_GET['query']);
+	
+	if ($_GET['sort'] == 'id') {
+        $sql .= " ORDER BY id";
+    }
+    elseif ($_GET['sort'] == 'identifier') {
+        $sql .= " ORDER BY identifier";
+    }
+    elseif ($_GET['sort'] == 'created') {
+        $sql .= " ORDER BY created";
+    }
+    elseif ($_GET['sort'] == 'modified') {
+        $sql .= " ORDER BY modified";
+    }
+    elseif ($_GET['sort'] == 'athletename') {
+        $sql .= " ORDER BY athletename";
+    }
+    elseif ($_GET['sort'] == 'dob') {
+        $sql .= " ORDER BY dob";
+    }
+    elseif ($_GET['sort'] == 'identified_gender') {
+        $sql .= " ORDER BY identified_gender";
+    }
+    elseif ($_GET['sort'] == 'competitionid') {
+        $sql .= " ORDER BY competitionid";
+    }
 	
 	try { 
         $pdo = new PDO('pgsql:host=127.0.0.1;port=5432;dbname=TestDb;user=webuser');
@@ -52,6 +77,7 @@ Query here: <input type="text" name="query"><br>
         $rows = $pdo->query($sql);
 
         $firstrow = $rows->fetch();
+        
 
         echo '<table>';
 
@@ -59,7 +85,7 @@ Query here: <input type="text" name="query"><br>
 
         foreach ($firstrow as $key => $value) {
             if (is_string($key)) {
-                echo "<th>$key</th>";
+                echo "<th><a href=\"index.php?sort=$key&query=$sql\">$key</a></th>";
             }
         }
 
@@ -90,6 +116,12 @@ Query here: <input type="text" name="query"><br>
 </table>
 
 <?PHP
+        echo "<br><br><i>Your query:   </i>$sql";
+	}
+	elseif (isset($_GET['sort'])) {
+	
+        echo "Hello, world!";
+	
 	}
 ?>
 
