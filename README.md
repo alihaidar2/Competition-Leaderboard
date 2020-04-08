@@ -142,3 +142,29 @@ php -S 127.0.0.1:7000 application/index.php
 
 
 ![Application](assets/app.png)
+
+
+# Deliverable 3
+
+Below are different models and SQL queries that can be used on our database
+
+## ER Model
+
+![ER Model](assets/ERModel3.jpeg)
+
+## Relational Model
+
+![Relational Model](assets/RelationalModel3.jpeg)
+
+
+## SQL Schema
+
+The [schema for delivrable 3](https://github.com/professor-forward/projet-csi2532_team/tree/master/db/Updatedschema.sql) is also available.
+
+
+## Database Seed
+
+The [seed ](https://github.com/professor-forward/projet-csi2532_team/blob/master/db/UpdatedSeed.sql) used to populate de database.
+
+
+## Application
