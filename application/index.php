@@ -44,33 +44,47 @@ Query here: <input type="text" name="query"><br>
 
 	$sql = htmlspecialchars($_POST['query']) . htmlspecialchars($_GET['query']);
 	
+	$orderbyclause = 'ORDER BY';
+	$sortupclause = 'ASC';
+	$sortdownclasuse = 'DESC';
+	
 	if ($_GET['sort'] == 'id') {
-        $sql .= " ORDER BY id";
+        if(strpos($sql, $orderbyclause) !== false) {
+            if(strpos($sql, $sortupclause) !== false) {
+                $sql = str_replace('ASC', 'DESC', $sql);
+            }
+            elseif(strpos($sql, $sortdownclause) !== false) {
+                $sql = str_replace('DESC', 'ASC', $sql);
+            }
+        }
+        else {
+            $sql .= " ORDER BY id ASC";
+        }
     }
     elseif ($_GET['sort'] == 'identifier') {
-        $sql .= " ORDER BY identifier";
+        $sql .= " ORDER BY identifier ASC";
     }
     elseif ($_GET['sort'] == 'created') {
-        $sql .= " ORDER BY created";
+        $sql .= " ORDER BY created ASC";
     }
     elseif ($_GET['sort'] == 'modified') {
-        $sql .= " ORDER BY modified";
+        $sql .= " ORDER BY modified ASC";
     }
     elseif ($_GET['sort'] == 'athletename') {
-        $sql .= " ORDER BY athletename";
+        $sql .= " ORDER BY athletename ASC";
     }
     elseif ($_GET['sort'] == 'dob') {
-        $sql .= " ORDER BY dob";
+        $sql .= " ORDER BY dob ASC";
     }
     elseif ($_GET['sort'] == 'identified_gender') {
-        $sql .= " ORDER BY identified_gender";
+        $sql .= " ORDER BY identified_gender ASC";
     }
     elseif ($_GET['sort'] == 'competitionid') {
-        $sql .= " ORDER BY competitionid";
+        $sql .= " ORDER BY competitionid ASC";
     }
 	
 	try { 
-        $pdo = new PDO('pgsql:host=127.0.0.1;port=5432;dbname=TestDb;user=webuser');
+        $pdo = new PDO('pgsql:host=127.0.0.1;port=5432;dbname=LeaderboardDB;user=ivor');
         
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
