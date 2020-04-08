@@ -168,3 +168,7 @@ The [seed ](https://github.com/professor-forward/projet-csi2532_team/blob/master
 
 
 ## Application
+
+![App1](assets/app1.png)
+
+![App2](assets/app2.png)
