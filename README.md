@@ -144,14 +144,13 @@ php -S 127.0.0.1:7000 application/index.php
 ![Application](assets/app.png)
 
 
-
 # Deliverable 3
 
 Below are different models and SQL queries that can be used on our database
 
 ## ER Model
 
-INSERT NEW ER DIAGRAM HERE
+![ER Model](assets/ERModel3.jpeg)
 
 ## Relational Model
 
