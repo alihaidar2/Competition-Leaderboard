@@ -32,9 +32,9 @@ table tr th {
 
 <form action="index.php" method="post">
 
-Query here: <input type="text" name="query"><br>
-
-<input type="submit">
+<input type="submit" value="Get athletes sorted by DOB">
+<input type="submit" value="Get athletes sorted by name">
+<input type="submit" value="Get athletes grouped by gender">
 
 </form>
 
@@ -42,7 +42,7 @@ Query here: <input type="text" name="query"><br>
 
 	if (isset($_POST['query']) or isset($_GET['sort'])) {
 
-	$sql = htmlspecialchars($_POST['query']) . htmlspecialchars($_GET['query']);
+	$sql = 'SELECT * FROM athletes SORT BY dob ASC';
 	
 	$orderbyclause = 'ORDER BY';
 	$sortupclause = 'ASC';
