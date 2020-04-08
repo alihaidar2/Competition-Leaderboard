@@ -151,11 +151,11 @@ Below are different models and SQL queries that can be used on our database
 
 ## ER Model
 
-![ER Model](assets/ERModel2.png)
+INSERT NEW ER DIAGRAM HERE
 
 ## Relational Model
 
-![Relational Model](assets/RelationalModel3.png)
+![Relational Model](assets/RelationalModel3.jpeg)
 
 
 ## SQL Schema
